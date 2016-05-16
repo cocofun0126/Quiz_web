@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="example.GoodsMapper">
+  
+  <insert id="insertGoods">
+  INSERT INTO GOODS (gno, brand, price)
+  values ( #{gno}, #{brand}, #{price} )
+  </insert>
+  
+  <update id="updateGoods">
+  UPDATE goods SET brand=#{brand}, price=#{price}
+  WHERE gno=#{gno}
+  </update>
+  
+  <delete id="deleteGoods">
+  DELETE FROM Goods WHERE gno=#{gnooooooooo}
+  </delete>
+  
+  <select id="selectOne" resultType="day02.dao.Goods">
+  SELECT * FROM Goods WHERE gno = #{ggggggggno}
+  </select>
+  
+  <select id="selectAll" resultType="day02.dao.Goods">
+  select * from (
+	 select ROWNUM rn, a.*
+	 from(
+	  select * from goods 
+	  <if test="key == 'brand'">
+	  WHERE brand LIKE #{word}
+	  </if>
+	  <if test="key == 'price'">
+	  WHERE price  = #{word}
+	  </if>
+	order by gno ) a )
+   WHERE rn between #{start} and #{end}
+  </select>
+</mapper>
+  
+  
+  
+
+
+

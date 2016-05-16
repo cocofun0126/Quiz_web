@@ -1,0 +1,10 @@
+eclipse.preferences.version=1
+encoding//src/day02/dao/GoodsDao.java=KSC5601
+encoding//src/day02/dao/GoodsDaoImpl.java=ksc5601
+encoding//src/day02/dao/MemberDao.java=KSC5601
+encoding//src/day02/dao/MemberDaoImpl.java=ksc5601
+encoding//src/day02/service/GoodsService.java=ksc5601
+encoding//src/day02/service/MemberService.java=ksc5601
+encoding//src/day02/service/MemberServiceImpl.java=UTF-8
+encoding//src/day04/controller/MemberController.java=ksc5601
+encoding/<project>=UTF-8
